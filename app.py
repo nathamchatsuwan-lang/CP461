@@ -18,6 +18,7 @@ else:
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
+    try:
         image = Image.open(uploaded_file)
         # Load the image
         st.image(image, use_container_width=True)
